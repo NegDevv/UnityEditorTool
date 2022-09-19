@@ -1,0 +1,26 @@
+Tein Unityyn editor työkalun jolla voi "scätteröidä" assetteja sceneen. Tein työkaluun myös helppokäyttöisen UI:n.
+
+
+Unity projektissa on Scenes kansiossa EditorToolScene jonka hierarkiassa on ScatterTool työkalu.
+ScatterTool pitää olla valittuna hierakiasta jotta sitä voi käyttää ja sen asetuksia muuttaa inspectorissa.
+Inspector ikkunassa voi scatteröitävän assetin valita painamalla sitä vastaavaa kuvaa. Kuvat sijaitsevat painikkeiden alapuolella(Layoutista ja näytön resoluutiosta riippuen voi joutua scrollaamaan inspector ikkunaa että näkyvät)
+Tällähetkellä valittu assetti näkyy inspectorin preview ikkunassa.
+Lisää assetteja voi ladata "Load asset" tai "Load asset folder" painikkeilla.(Löytää vain .obj ja .fbx tiedostot)
+Muutama ylimääräinen assetti löytyy Assets/Objects kansiosta jos haluaa testata.
+"Unload selected asset" painikkeella voi poistaa tällä hetkellä valittuna olevan assetin työkalusta.
+"Unload all assets" poistaa kaikki assetit työkalusta, jolloin pitää ladata vähintaan yksi assetti jotta scätteröintiä voi jatkaa.
+"Clear objects" poistaa sceneen scatteröityjä GameObjekteja.
+
+Hiiren sijainnista Scene ikkunassa castataan sceneen ray joka osuu scenen geometriaan jonka osumakohtaan GameObjekti instantioidaan.
+Scätteröinti tapahtuu painamalla hiirellä Scene ikkunassa kohtaa johon haluaa objektin/objekteja scätteröidä.(ScatterTool pitää olla valittuna hierarkiassa)
+Hiiren osoittamaan kohtaan scenessä piirtyy vihreä apu Gizmo.
+
+Scätteröidyt GameObjektit menevät hierarkiassa omiin parent GameObjekteihinsa ScatterToolin alta löytyvässä "Scattered object containers" GameObjektissa.
+
+Inspectorissa voi säätää erilaisia scätteröintiin vaikuttavia asetuksia.
+Kun Sweep asetus on päällä ja hiiren vasenta painiketta pitää pohjassa Scene ikkunassa, voi hiirtä raahamalla scätteröidä useita GameObjekteja.(Density slider päättää tiheyden)
+Random Spread sallii satunnaisen hajonnan jota voidaan säätää Spread sliderilla.
+Randomize Rotation(X, Y, Z) asetuksilla voi laittaa päälle satunnaisen rotaation. (Y on oletuksena päällä)
+Random Size laittaa päälle satunnaisen koon vaihtelun jonka minimi ja maksimi arvoja voi säätää Min Size ja Max Size slidereilla.
+Density slider määrittää kuinka paljon/kauas hiirtä pitää liikuttaa Sweep tilassa että seuraava GameObjekti scätteröidään, eli kuinka tiheään GameObjektit scätteröidään.
+

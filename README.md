@@ -1,7 +1,7 @@
 # Unity Editor Scatter Tool
 
 
-## Editor tool for scattering objects to the scene.
+## Editor tool for scattering objects into the scene.
 
 <img src="UnityEditorScatterTool.png" alt="Raytracer application window" width="900"/>
 

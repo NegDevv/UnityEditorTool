@@ -3,7 +3,7 @@
 
 ## Editor tool for scattering objects to the scene.
 
-<img src="UnityEditorScatterTool.png" alt="Raytracer application window" width="700"/>
+<img src="UnityEditorScatterTool.png" alt="Raytracer application window" width="900"/>
 
 ## UI
 - Object loading/unloading
